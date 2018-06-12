@@ -14,6 +14,7 @@ class ComposerTableViewController: UITableViewController {
     var composers = [Composer]()
     
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         loadComposerList()
@@ -45,9 +46,11 @@ class ComposerTableViewController: UITableViewController {
     // This function displays the cell at each row, and deals with the fact that not all cells may be visible at once
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
+        //tableView.register(ComposerTableViewCell.self, forCellWithReuseIdentifier: ComposerTableViewCell.reuseIdentifier)
+        
         let cellIdentifier = "ComposerTableViewCell"
         guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? ComposerTableViewCell else {
-            fatalError("The dequeued cell is not an intance of ComposedTableViewCell")
+            fatalError("The dequeued cell is not an instance of ComposedTableViewCell")
         }
         
         let composer = composers[indexPath.row]
