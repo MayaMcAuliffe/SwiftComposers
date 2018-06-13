@@ -13,8 +13,6 @@ class ComposerTableViewController: UITableViewController {
     // Mark: Properties
     var composers = [Composer]()
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         loadComposerList()
@@ -45,16 +43,14 @@ class ComposerTableViewController: UITableViewController {
 
     // This function displays the cell at each row, and deals with the fact that not all cells may be visible at once
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        //tableView.register(ComposerTableViewCell.self, forCellWithReuseIdentifier: ComposerTableViewCell.reuseIdentifier)
-        
+   
         let cellIdentifier = "ComposerTableViewCell"
         guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? ComposerTableViewCell else {
             fatalError("The dequeued cell is not an instance of ComposedTableViewCell")
         }
         
         let composer = composers[indexPath.row]
-        cell.nameLabel.text = composer.name
+        cell.nameButton.setTitle(composer.name, for: .normal)
         
         return cell
     }
@@ -108,15 +104,14 @@ class ComposerTableViewController: UITableViewController {
     // Mark: Private Methods
     private func loadComposerList() {
         let composer1 = Composer(name: "Motzart")
-//        let composer2 = Composer(name: "Beethovan")
-//        let composer3 = Composer(name: "Brahms")
-//        let composer4 = Composer(name: "Tchaikovsky")  //1840
-//        let composer5 = Composer(name: "Prokofiev") //1891
-//        let composer6 = Composer(name: "Mahler")
-//        let composer7 = Composer(name: "Bach")
+        let composer2 = Composer(name: "Beethovan")
+        let composer3 = Composer(name: "Brahms")
+        let composer4 = Composer(name: "Tchaikovsky")  //1840
+        let composer5 = Composer(name: "Prokofiev") //1891
+        let composer6 = Composer(name: "Mahler")
+        let composer7 = Composer(name: "Bach")
         
-        composers += [composer1]
-                      //composer2, composer3, composer4, composer5, composer6, composer7]
+        composers += [composer1, composer2, composer3, composer4, composer5, composer6, composer7]
     }
 
 }

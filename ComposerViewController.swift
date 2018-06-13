@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  ComposerViewController.swift
 //  composers
 //
 //  Created by Maya McAuliffe on 6/11/18.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ComposerViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

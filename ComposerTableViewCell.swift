@@ -10,9 +10,8 @@ import UIKit
 
 class ComposerTableViewCell: UITableViewCell {
     // Mark: Properties
-    @IBOutlet weak var nameLabel: UILabel!
-    
-    
+    @IBOutlet weak var nameButton: UIButton!
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
