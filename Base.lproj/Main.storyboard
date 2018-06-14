@@ -26,17 +26,15 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="foS-Pr-7sg">
-                                            <rect key="frame" x="0.0" y="-13" width="191" height="62"/>
+                                            <rect key="frame" x="0.0" y="-13" width="142" height="58"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <state key="normal" title="Button"/>
-                                            <connections>
-                                                <segue destination="BYZ-38-t0r" kind="show" id="HgB-xK-J7K"/>
-                                            </connections>
                                         </button>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="nameButton" destination="foS-Pr-7sg" id="I7u-nU-jZg"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="Ay0-WN-kdZ"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -49,7 +47,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vLU-zf-kLF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="167.19999999999999" y="139.880059970015"/>
+            <point key="canvasLocation" x="-84" y="140"/>
         </scene>
         <!--Composer View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -67,7 +65,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="972" y="38.23088455772114"/>
+            <point key="canvasLocation" x="628" y="139.880059970015"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="YuN-Do-9TP">

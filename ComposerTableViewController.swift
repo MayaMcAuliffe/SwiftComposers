@@ -37,7 +37,7 @@ class ComposerTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        // Rhe number of rows in the table should be the number of composer I want to display
+        // The number of rows in the table should be the number of composer I want to display
         return composers.count
     }
 
@@ -54,6 +54,12 @@ class ComposerTableViewController: UITableViewController {
         
         return cell
     }
+    
+    // this function might be irrelevant, this may only work with storyboard currently
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        performSegue(withIdentifier: "ComposerView", sender: self)
+    }
+    
     
 
     /*
@@ -91,15 +97,22 @@ class ComposerTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        //NSLog("hello world")
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        let comp = composers[(tableView.indexPathForSelectedRow?.row)!]
+        
+        let seg = segue.destination as! ComposerViewController
+        seg.composer = comp
+        
+        
     }
-    */
+ 
     
     // Mark: Private Methods
     private func loadComposerList() {
